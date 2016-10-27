@@ -38,22 +38,22 @@ describe Racer do
       expect(racer.best_race "foot", 5).to eq(five_k_two)
     end
   end
-  # describe "#best_avg_speed" do
-  #   it "can find the best average speed in meters per minute of a given race type and distance rounded to two decimal places" do
-  #     racer.add_race five_k
-  #     racer.add_race five_k_two
-  #     expect(racer.best_avg_speed "foot", 5).to eq(237.15)
-  #   end
-  # end
-  # describe "#fastest_km_time" do
-  #   it "can find the fastest time for km given a race type" do
-  #     racer.add_race five_k
-  #     racer.add_race five_k_two
-  #     racer.add_race ten_k
-  #     racer.add_race bike_ten_k
-  #     racer.add_race bike_ten_k_two
-  #     expect(racer.fastest_km_time "foot").to eq(241)
-  #     expect(racer.fastest_km_time "bike").to eq(92)
-  #   end
-  # end
+  describe "#best_avg_speed" do
+    it "can find the best average speed in meters per minute of a given race type and distance rounded to two decimal places" do
+      racer.add_race five_k
+      racer.add_race five_k_two
+      expect(racer.best_avg_speed "foot", 5).to eq(237.15)
+    end
+  end
+  describe "#fastest_km_time" do
+    it "can find the fastest time for km given a race type" do
+      racer.add_race five_k
+      racer.add_race five_k_two
+      racer.add_race ten_k
+      racer.add_race bike_ten_k
+      racer.add_race bike_ten_k_two
+      expect(racer.fastest_km_time "foot").to eq(241)
+      expect(racer.fastest_km_time "bike").to eq(92)
+    end
+  end
 end
