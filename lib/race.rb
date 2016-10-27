@@ -31,4 +31,11 @@ class Race
     (meters/seconds).round(2)
   end
 
+  def human_readable_times_for_kms
+    km_times.map do |time|
+    mm, ss = time.divmod(60)
+    "#{mm} minute(s) #{ss} second(s)"
+    end
+  end
+
 end

@@ -61,15 +61,15 @@ describe Race do
       expect(ten_k.avg_speed).to eq(202.09)
     end
   end
-  # describe "#human_readable_times_for_kms" do
-  #   it "can get human readable times in minutes and seconds for km times" do
-  #     expect(five_k.human_readable_times_for_kms).to eq([
-  #       "4 minute(s) 16 second(s)",
-  #       "4 minute(s) 30 second(s)",
-  #       "5 minute(s) 10 second(s)",
-  #       "5 minute(s) 17 second(s)",
-  #       "4 minute(s) 28 second(s)"
-  #       ])
-  #   end
-  # end
+  describe "#human_readable_times_for_kms" do
+    it "can get human readable times in minutes and seconds for km times" do
+      expect(five_k.human_readable_times_for_kms).to eq([
+        "4 minute(s) 16 second(s)",
+        "4 minute(s) 30 second(s)",
+        "5 minute(s) 10 second(s)",
+        "5 minute(s) 17 second(s)",
+        "4 minute(s) 28 second(s)"
+        ])
+    end
+  end
 end
