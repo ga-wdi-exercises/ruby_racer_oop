@@ -10,7 +10,7 @@ class Race
   end
 
   def total_time
-    km_times.inject(0, :+)
+    km_times.reduce(:+)
   end
 
   def slowest_km
@@ -22,7 +22,13 @@ class Race
   end
 
   def avg_time_per_km
-    (self.total_time / @km_times.length.to_f).round(2)
+    (total_time / @km_times.length.to_f).round(2)
+  end
+
+  def avg_speed
+    meters = @distance*1000
+    seconds = total_time/60.to_f
+    (meters/seconds).round(2)
   end
 
 end
