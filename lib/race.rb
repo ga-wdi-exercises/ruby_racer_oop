@@ -24,7 +24,20 @@ class Race
       @km_times.reduce(:+) / @km_times.size.to_f
     end
 
+    def avg_speed
+      #total time in km
+      total_mins = total_time.to_f / 60
+      # total distance in meters
+      total_meters = @distance.to_f * 1000
+      (total_meters/total_mins).round(2)
+    end
 
+    def human_readable_times_for_kms
+      @km_times.map {|time|
+        mins = time /60
+        secs = time % 60
+        "#{mins} minute(s) #{secs} second(s)"}
+    end
 
 
 end
