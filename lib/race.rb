@@ -16,6 +16,6 @@ class Race
     return km_times.min
   end
   def avg_time_per_km
-    return total_time/km_times.size
+    return (total_time/km_times.length.to_f).round(2)
   end
 end
