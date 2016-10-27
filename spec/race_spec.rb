@@ -54,22 +54,24 @@ describe Race do
       expect(ten_k.avg_time_per_km).to eq(296.90)
     end
   end
-  # describe "#avg_speed" do
-  #   it "has an average speed for the race rounded to 2 decimal places in meters per minute" do
-  #     expect(five_k.avg_speed).to eq(211.12)
-  #     expect(five_k_two.avg_speed).to eq(237.15)
-  #     expect(ten_k.avg_speed).to eq(202.09)
-  #   end
-  # end
-  # describe "#human_readable_times_for_kms" do
-  #   it "can get human readable times in minutes and seconds for km times" do
-  #     expect(five_k.human_readable_times_for_kms).to eq([
-  #       "4 minute(s) 16 second(s)",
-  #       "4 minute(s) 30 second(s)",
-  #       "5 minute(s) 10 second(s)",
-  #       "5 minute(s) 17 second(s)",
-  #       "4 minute(s) 28 second(s)"
-  #       ])
-  #   end
-  # end
+
+  describe "#avg_speed" do
+    it "has an average speed for the race rounded to 2 decimal places in meters per minute" do
+      expect(five_k.avg_speed).to eq(211.12)
+      expect(five_k_two.avg_speed).to eq(237.15)
+      expect(ten_k.avg_speed).to eq(202.09)
+    end
+  end
+  
+  describe "#human_readable_times_for_kms" do
+    it "can get human readable times in minutes and seconds for km times" do
+      expect(five_k.human_readable_times_for_kms).to eq([
+        "4 minute(s) 16 second(s)",
+        "4 minute(s) 30 second(s)",
+        "5 minute(s) 10 second(s)",
+        "5 minute(s) 17 second(s)",
+        "4 minute(s) 28 second(s)"
+        ])
+    end
+  end
 end
